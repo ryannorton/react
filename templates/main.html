@@ -4,20 +4,91 @@
 <head>
     <meta charset="utf-8">
     <title>React Wearables</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="header-group">
+        <img src="{{ url_for('static',filename='img/main-image.png') }}" id="main-image">
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" id="emailinput" placeholder="Email">
+          </div>
+        </form>
+    </div>
+    <div class="section2">
+        <span class="divider"></span>
+        <p id="section2-title">The <span class="red">next step</span> in Immersive Gaming</p>
     </div>
 
-    <div class="body">
-        React Wearables
+    <div class="container">
+        <div class="col-md-5">
+            <ul>
+                <li>
+                    <span>Use the power of your brain signals (EEG) to execute special moves via concentration and facial expression</span>
+                </li>
+                <li><span>Use gesture and muscle control (EMG) for classic moves as seen in the game.</li></span>
+                <li><span>Use the wearable iSol foot technology for real-time location control such as moving forward and backwards, as well as jumping and crouching.</li></span>
+            </ul>
+        </div>
+        <div class="col-md-7">
+            <img src="{{ url_for('static',filename='img/computer-demo.png') }}" class="comp-demo-img">
+        </div>
+    </div>
+    <div class="devices">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static',filename='img/muse.png') }}" class="comp-demo-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static',filename='img/myo.png') }}" class="comp-demo-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static',filename='img/isol.jpg') }}" class="comp-demo-img">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Muse</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Myo</p>
+                </div>
+                <div class="col-md-4">
+                    <p>iSol</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img src="{{ url_for('static',filename='img/mac.png') }}" class="comp-demo-img">
+    </div>
+    <div class="section2">
+        <span class="divider"></span>
+        <p id="section3-title">The <span class="red">minds</span> behind React<sup>®</sup></p>
     </div>
 
+    <div class="container">
+        <div class="col-md-3">
+            <img src="{{ url_for('static',filename='img/1.png') }}" class="comp-demo-img">
+        </div>
+        <div class="col-md-3">
+            <img src="{{ url_for('static',filename='img/2.png') }}" class="comp-demo-img">
+        </div>
+        <div class="col-md-3">
+            <img src="{{ url_for('static',filename='img/3.png') }}" class="comp-demo-img">
+        </div>
+        <div class="col-md-3">
+            <img src="{{ url_for('static',filename='img/4.png') }}" class="comp-demo-img">
+        </div>
+    </div>
 
-    <script src="{{ url_for('static',filename='main.js') }}"></script>
+    <div class="footer">
+        <div class="container">
+            <p>© 2015, React</p>
+        </div>
+    </div>  
 </body>
 </html>
