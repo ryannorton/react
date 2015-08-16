@@ -1,4 +1,8 @@
+import json
+
 from flask import Flask, render_template
+
+
 app = Flask(__name__)
 
 
@@ -6,6 +10,8 @@ PLAYER_DIRECTIONS = {
     1: 'forward',
     2: 'backward'
 }
+
+INTENSITY = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
 @app.route('/')
@@ -22,9 +28,21 @@ def change_direction(player, direction):
     return 'successful'
 
 
+@app.route('/intensity/<int:intensity>/')
+def set_intensity(intensity):
+    global INTENSITY
+    INTENSITY.append(intensity)
+    INTENSITY = INTENSITY[1:]
+    print INTENSITY
+    return 'success'
+
+
 @app.route('/stats/')
 def get_stats():
-    return PLAYER_DIRECTIONS[1].upper()
+    return json.dumps({
+        'direction': PLAYER_DIRECTIONS[1].upper(),
+        'intensity': str(min(sum(INTENSITY) / len(INTENSITY) / 3, 100))
+    })
 
 
 @app.route('/dashboard/')
