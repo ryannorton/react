@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>React Wearables</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel= "stylesheet" type= "text/css" href= "css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
 </head>
 
 <body>
     <div class="header-group">
-        <img src="img/main-image.png" id="main-image">
+        <img src="{{ url_for('static',filename='img/main-image.png') }}" id="main-image">
         <form>
           <div class="form-group">
             <input type="email" class="form-control" id="emailinput" placeholder="Email">
@@ -33,20 +33,20 @@
             </ul>
         </div>
         <div class="col-md-7">
-            <img src="img/computer-demo.png" class="comp-demo-img">
+            <img src="{{ url_for('static',filename='img/computer-demo.png') }}" class="comp-demo-img">
         </div>
     </div>
     <div class="devices">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="img/headband.png">
+                    <img src="{{ url_for('static',filename='img/headband.png') }}">
                 </div>
                 <div class="col-md-4">
-                    <img src="img/myo.png" class="myo-img">
+                    <img src="{{ url_for('static',filename='img/myo.png') }}" class="myo-img">
                 </div>
                 <div class="col-md-4">
-                    <img src="img/shoe.png">
+                    <img src="{{ url_for('static',filename='img/shoe.png') }}">
                 </div>
             </div>
             <div class="row">
@@ -63,7 +63,7 @@
         </div>
     </div>
     <div class="container">
-        <img src="img/mac.png" class="comp-demo-img">
+        <img src="{{ url_for('static',filename='img/mac.png') }}" class="comp-demo-img">
     </div>
     <div class="section2">
         <span class="divider"></span>
@@ -72,16 +72,16 @@
 
     <div class="container">
         <div class="col-md-3">
-            <img src="/img/1.png" class="comp-demo-img">
+            <img src="{{ url_for('static',filename='img/1.png') }}" class="comp-demo-img">
         </div>
         <div class="col-md-3">
-            <img src="/img/2.png" class="comp-demo-img">
+            <img src="{{ url_for('static',filename='img/2.png') }}" class="comp-demo-img">
         </div>
         <div class="col-md-3">
-            <img src="/img/3.png" class="comp-demo-img">
+            <img src="{{ url_for('static',filename='img/3.png') }}" class="comp-demo-img">
         </div>
         <div class="col-md-3">
-            <img src="/img/4.png" class="comp-demo-img">
+            <img src="{{ url_for('static',filename='img/4.png') }}" class="comp-demo-img">
         </div>
     </div>
 
